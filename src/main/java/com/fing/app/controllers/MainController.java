@@ -20,9 +20,9 @@ public class MainController {
 		  @GetMapping("/profile")
 		  public String tabla(Model model) {
 			  
-			  model.addAttribute("Color", false); //AQUI PARA CAMBIAR EL COLOR DE LA TABLA
+			  model.addAttribute("Color", true); //AQUI PARA CAMBIAR EL COLOR DE LA TABLA
 			  
-			  Usuario user = new Usuario("Angel Rodriguez", "a377043@uach.mx","Ingenieria en Ciencias de la Computacion");
+			  Usuario user = new Usuario("Angel Rodriguez Palomino", "a377043@uach.mx","Ingenieria en Ciencias de la Computacion");
 			  
 			  model.addAttribute("user", user);
 			  
