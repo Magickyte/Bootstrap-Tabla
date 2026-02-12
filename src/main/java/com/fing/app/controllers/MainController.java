@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.fing.app.models.Usuario;
+
 
 @Controller
 public class MainController {
@@ -17,6 +19,13 @@ public class MainController {
 	}
 		  @GetMapping("/profile")
 		  public String tabla(Model model) {
-			  return profile;
+			  
+			  model.addAttribute("Color", false); //AQUI PARA CAMBIAR EL COLOR DE LA TABLA
+			  
+			  Usuario user = new Usuario("Angel Rodriguez", "a377043@uach.mx","Ingenieria en Ciencias de la Computacion");
+			  
+			  model.addAttribute("user", user);
+			  
+			  return "profile";
 		  }
 }
