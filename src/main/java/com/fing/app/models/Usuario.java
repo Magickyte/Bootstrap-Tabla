@@ -1,16 +1,21 @@
 package com.fing.app.models;
 
 
+
 public class Usuario {
 
   private String name;
   private String email;
   private String carrera;
 
+  public Usuario() {
+	  
+  }
   public Usuario(String name, String email, String carrera) {
     this.name = name;
     this.email = email;
     this.carrera = carrera;
+
   }
 
   public String getName() {
@@ -36,6 +41,8 @@ public class Usuario {
   public void setCarrera(String carrera) {
 	this.carrera = carrera;
   }
+
+
 
 
 }
